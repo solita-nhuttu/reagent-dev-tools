@@ -1,6 +1,6 @@
 (ns reagent-dev-tools.core
   (:require [reagent.core :as r]
-            [reagent.dom.core :as rdc]
+            [reagent.dom.client :as rdc]
             [reagent-dev-tools.styles :as s]
             [reagent-dev-tools.state-tree :as state-tree]
             [reagent-dev-tools.state :as state]
