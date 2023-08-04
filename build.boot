@@ -9,7 +9,7 @@
 
                   ;; No need to depend on Reagent, it is presumed
                   ;; the application provides it.
-                  [reagent "1.1.1" :scope "provided"]
+                  [reagent "1.2.0" :scope "provided"]
                   [cljsjs/react "17.0.2-0" :scope "test"]
                   [cljsjs/react-dom "17.0.2-0" :scope "test"]
 

@@ -1,6 +1,6 @@
 (ns reagent-dev-tools.core
   (:require [reagent.core :as r]
-            [reagent.dom :as rdom]
+            [reagent.dom.core :as rdc]
             [reagent-dev-tools.styles :as s]
             [reagent-dev-tools.state-tree :as state-tree]
             [reagent-dev-tools.state :as state]
@@ -174,8 +174,7 @@
                         (.appendChild (.-body js/document) el)
                         el)))]
 
-    (rdom/render
-      [dev-tool {:margin-element (:margin-element opts)
-                 :panels (into (create-default-panels opts)
-                               (:panels opts))}]
-      el)))
+    (.render (rdc/createRoot el)
+             (r/as-element [dev-tool {:margin-element (:margin-element opts)
+                                      :panels (into (create-default-panels opts)
+                                                    (:panels opts))}]))))
