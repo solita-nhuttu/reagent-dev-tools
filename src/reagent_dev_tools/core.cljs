@@ -174,7 +174,7 @@
                         (.appendChild (.-body js/document) el)
                         el)))]
 
-    (.render (reagent.dom.client/create-root el)
+    (.render el
              (r/as-element [dev-tool {:margin-element (:margin-element opts)
                                       :panels (into (create-default-panels opts)
                                                     (:panels opts))}]))))
