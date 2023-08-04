@@ -174,7 +174,7 @@
                         (.appendChild (.-body js/document) el)
                         el)))]
 
-    (rdc/render
+    (rdc/hydrate-root
      [dev-tool {:margin-element (:margin-element opts)
                 :panels (into (create-default-panels opts)
                               (:panels opts))}]
